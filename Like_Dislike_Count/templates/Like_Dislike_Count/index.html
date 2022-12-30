@@ -1,0 +1,24 @@
+{% extends "Like_Dislike_Count/layout.html" %}
+
+{% load static %}
+
+{% block head %}
+
+    <title>Likes VS Dislikes</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <!-- Like button and count section -->
+    {% csrf_token %}
+    <h2>Likes: <span id="likes"> {{ likes }} </span> </h2>
+    <button id="like-btn">Like</button>
+
+   <br> <hr> <br>
+
+    <!-- Dislike button and count section --->
+    <h2>Dislikes: <span id="dislikes"> {{ dislikes }} </span> </h2>
+    <button id="dislike-btn">Dislike</button>
+
+{% endblock %}
